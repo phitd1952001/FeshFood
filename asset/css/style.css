@@ -1,0 +1,618 @@
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* style cho cái tag a */
+
+a {
+    /* set mau chữ ve vi ti ban dau */
+    color: unset;
+    /* kieu chu */
+    text-decoration: none;
+}
+
+
+/* vua chon body vua chon tag hmtl */
+
+body,
+html {
+    /* chon mau nen */
+    background-color: var(--background-color);
+    /* thanh cuon xuong kh anh huonh */
+    scroll-behavior: smooth;
+    /* so sanh voi lai vi tri ban dau */
+    position: relative;
+    /* cho phep cac chu trong hop kh tran ra ngoai */
+    overflow-x: hidden;
+}
+
+
+/* style cho nav thanh cong cu */
+
+.nav {
+    /* thanh cong cu khong bij di chuyen  */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /* chieu rong dung % gia tri
+    man hinh no se chia ra % cho man hinh
+    */
+    width: 100%;
+    /* the gia tri ching len nhau */
+    z-index: 9999;
+    /* mauf nen cho no */
+    background-color: var(--background-color);
+    /* bong cua nav */
+    /* rgba mau do xanh la xanh duong do trong suot, top, right, bottom, left*/
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+/* style menu-wrapper nam trong nav */
+
+.menu-wrapper {
+    /* chieu rong toi da man hinh */
+    max-width: 1366px;
+    margin: auto;
+    /* cho no nam ten 1 hang */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+/* style cho cai logo nav*/
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+
+/* style cho cai menu nav*/
+
+.menu {
+    display: flex;
+    /* cho o giua */
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    /* cach nhau giua cac o menu item*/
+    margin-left: 1rem;
+    padding: .5rem 1.5rem;
+    /* in dam len */
+    font-weight: 600;
+    color: var(--grey);
+    /* hieu ung nhe nhang dua vao va nhe nhang dua */
+    transition: 0.5 ease-in-out;
+}
+
+
+/* :bo du do class hieu ung thay doi mau o menu */
+
+
+/* hover: dua con chuot vo la hieu ung hover */
+
+.menu-item:hover,
+.menu-item.active {
+    /* dua chuot vo doi thanh mau khac */
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+}
+
+
+/* style cho cai cart-btn */
+
+.cart-btn {
+    /* chieu rong, chieu cao */
+    width: 3rem;
+    height: 3rem;
+    /* cho no nam giua cai o vuong */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* kich thuoc */
+    font-size: 2rem;
+    /* con chuot bien thanh canh tay */
+    cursor: pointer;
+    color: var(--primary-color);
+    /* hieu ung nhe nhang dua vao va nhe nhang dua */
+    transition: 0.5 ease-in-out;
+}
+
+
+/* hieu ung hover */
+
+.cart-btn:hover {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    color: var(--white);
+}
+
+
+/* kết thúc nav */
+
+
+/* style các thuộc tính cho 1 trang wed */
+
+
+/* style class fullheight full chieu cao */
+
+.fullheight {
+    /* vw lấy chiều rộng, vh sẽ lấy theo chiều cao */
+    height: 100vh;
+}
+
+
+/* style cho class no nam o giua */
+
+.align-items-center {
+    display: flex;
+    /* chiều dọc */
+    align-items: center;
+    /* chiều ngang */
+    justify-content: center;
+    /* about */
+    text-align: center;
+}
+
+
+/* style cho class de cho cai anh nen */
+
+.bg-img {
+    /* cho anh nam o giua */
+    background-position: center;
+    /* kich thuoc cua anh */
+    background-size: cover;
+    /* khong lap lai anh */
+    background-repeat: no-repeat;
+}
+
+
+/* style cho cai anh dung yen 1 cho */
+
+.bg-img-fixed {
+    /* cho anh dung yen 1 cho */
+    background-attachment: fixed;
+}
+
+
+/* style cho class container */
+
+.container {
+    /* đọ rộng */
+    width: 100%;
+    /* độ rộng của trang wed */
+    max-width: 1366px;
+    /* khoảng cách 2 ben với căn giữa */
+    margin: 0 auto;
+}
+
+
+/* style class row để bọc lại mấy thằng columng */
+
+.row {
+    /* nam tren 1 hang */
+    display: flex;
+    /* de cho cac o tu xuong dong */
+    flex-wrap: wrap;
+}
+
+
+/* dung de chinh cho tung kich thuoc man hinh nho hon 600 px la sai dc */
+
+@media only screen and (max-width:600px) {
+    .col-xs-1 {
+        width: 8.33%;
+    }
+    .col-xs-2 {
+        width: 16.66%;
+    }
+    .col-xs-3 {
+        width: 25%;
+    }
+    .col-xs-4 {
+        width: 33.33%;
+    }
+    .col-xs-5 {
+        width: 41.66%;
+    }
+    .col-xs-6 {
+        width: 50%;
+    }
+    .col-xs-7 {
+        width: 58.33%;
+    }
+    .col-xs-8 {
+        width: 66.66%;
+    }
+    .col-xs-9 {
+        width: 75%;
+    }
+    .col-xs-10 {
+        width: 83.33%;
+    }
+    .col-xs-11 {
+        width: 91.66%;
+    }
+    .col-xs-12 {
+        width: 100%;
+    }
+}
+
+
+/* de pading cho tat ca cac column */
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+/* viet cac cai column 1-12, 100/12*(1 or 12)*/
+
+
+/* ti le cac cot */
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/* ket thuc style các thuộc tính cho 1 trang wed */
+
+
+/* class home */
+
+.slogan {
+    /* can chinh chu thut vao ben ben trai */
+    text-align: left;
+}
+
+.slogan h1 {
+    font-size: 7rem;
+    color: var(--primary-color);
+}
+
+.slogan button {
+    margin: 3rem 0;
+    padding: 1rem 5rem;
+    /* lm noi bat duong vien */
+    outline: none;
+    /* duong vien */
+    border: none;
+    background-color: var(--background-color);
+    /* cho 1 cai duong vien moi */
+    /* solid kieu duong vien cua border */
+    border: .125rem solid var(--primary-color);
+    border-radius: 2rem;
+    color: var(--primary-color);
+    margin: 3rem o;
+    cursor: pointer;
+    /* cho chu no dam len */
+    font-weight: 800;
+    transition: 0.5 ease-in-out;
+}
+
+.slogan button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+/* ket thuc home */
+
+
+/* class about */
+
+.fullwidth {
+    width: 100%;
+}
+
+#about img {
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.about-slogan {
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    transform: translateX(-10rem);
+}
+
+.about-slogan h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--grey);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+
+/* ket thuc about */
+
+
+/* menu */
+
+.food-menu {
+    margin: 3rem;
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
+}
+
+.food-menu h1 {
+    color: var(--grey);
+}
+
+.food-menu p {
+    margin: 2rem 0;
+}
+
+
+/* button */
+
+.food-category button {
+    padding: 0.5rem 2.5rem;
+    margin: 0 2rem;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    /* trong suot */
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+}
+
+.food-category button:hover,
+.food-category button.active {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+
+/* button lớn */
+
+.food-item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
+
+.food-item {
+    width: 25%;
+    height: 30rem;
+    padding: 1rem;
+}
+
+.item-wrap {
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+}
+
+.item-wrap:hover {
+    border-radius: 2rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+
+/* để chứa ảnh */
+
+.item-img {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+
+/* ảnh */
+
+.item-holder {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5 ease-in-out;
+    border-radius: 2rem;
+}
+
+.item-holder:hover {
+    transform: scale(2) rotate(45deg);
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.item-info h3 {
+    color: var(--grey);
+}
+
+.item-info>div:first-child {
+    text-align: left;
+}
+
+
+/* ket thuc menu */
+
+
+/* testtimoninal */
+
+#testtimoninal {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.review-wrap {
+    margin: 10rem 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.review-wrap.active {
+    transform: scale(1.2);
+}
+
+.review-container {
+    padding: 3rem;
+    border-bottom: 0.125rem solid var(--grey);
+    position: relative;
+    text-align: center;
+}
+
+.review-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.75rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-info {
+    padding: 3rem;
+    text-align: center;
+}
+
+.rating {
+    margin-top: 1.5rem;
+}
+
+.rating i {
+    color: var(--primary-color);
+}
+
+
+/* testtimoninal */
+
+
+/* footer */
+
+.footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: var(--white);
+}
+
+.footer h1 {
+    color: var(--primary-color);
+}
+
+.input-group {
+    padding: 1rem;
+    border: 0.125rem solid var(--primary-color);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.input-group input {
+    flex: auto;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+}
+
+.input-group button {
+    padding: .5rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5 ease-in-out;
+}
+
+.input-group button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+
+/* footer */
